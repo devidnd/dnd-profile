@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DND DEVELOPMENT</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 40px 20px;
+        }
+
+        .marquee-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 0;
+            z-index: 1000;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.05);
+        }
+
+        .marquee-text {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100vw); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .glass-container {
+            background: #050505;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.4);
+        }
+
+        p.subtitle {
+            font-size: 13px;
+            color: #aaaaaa;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ffffff;
+            margin: 30px 0 15px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-shadow: 0 0 8px rgba(255,255,255,0.3);
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-btn:hover {
+            background: #ffffff;
+            color: #000000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .icon {
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .services-list {
+            text-align: left;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+
+        .service-list-item {
+            padding: 12px 0;
+            font-size: 14px;
+            color: #dddddd;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .service-list-item i {
+            color: #ffffff;
+            font-size: 18px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #666666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="marquee-container">
+        <div class="marquee-text" id="teks-berjalan"></div>
+    </div>
+
+    <div class="glass-container">
+        <img src="14853.jpg" alt="Logo DND" class="logo">
+        
+        <h1>DND DEVELOPMENT</h1>
+        <p class="subtitle">Elevating Your Digital Experience</p>
+
+        <div class="section-title">
+            <i class="fas fa-headset"></i> Hubungi Admin
+        </div>
+        <a id="link-wa-admin" href="#" class="link-btn" target="_blank">
+            <i class="fab fa-whatsapp icon"></i> WhatsApp Admin
+        </a>
+        <a id="link-tele-admin" href="#" class="link-btn" target="_blank">
+            <i class="fab fa-telegram icon"></i> Telegram Admin
+        </a>
+
+        <div class="section-title">
+            <i class="fas fa-users"></i> Join Komunitas
+        </div>
+        <a id="link-wa-channel" href="#" class="link-btn" target="_blank">
+            <i class="fab fa-whatsapp icon"></i> Channel WhatsApp
+        </a>
+        <a id="link-tele-channel" href="#" class="link-btn" target="_blank">
+            <i class="fab fa-telegram icon"></i> Channel Telegram
+        </a>
+
+        <div class="section-title">
+            <i class="fas fa-robot"></i> Karya & Project Bot
+        </div>
+        <a id="link-bot-1" href="#" class="link-btn" target="_blank">
+            <i class="fab fa-telegram icon"></i> <span id="nama-bot-1"></span>
+        </a>
+        <a id="link-bot-2" href="#" class="link-btn" target="_blank">
+            <i class="fab fa-telegram icon"></i> <span id="nama-bot-2"></span>
+        </a>
+        
+        <div class="section-title">
+            <i class="fas fa-code"></i> Project Web API
+        </div>
+        <a id="link-api-1" href="#" class="link-btn" target="_blank">
+            <i class="fas fa-globe icon"></i> <span id="nama-api-1"></span>
+        </a>
+        <a id="link-api-2" href="#" class="link-btn" target="_blank">
+            <i class="fas fa-server icon"></i> <span id="nama-api-2"></span>
+        </a>
+
+        <div class="section-title">
+            <i class="fas fa-star"></i> Layanan Premium
+        </div>
+        <div class="services-list">
+            <div class="service-list-item">
+                <i class="fas fa-check"></i> <span id="jasa-1"></span>
+            </div>
+            <div class="service-list-item">
+                <i class="fas fa-check"></i> <span id="jasa-2"></span>
+            </div>
+            <div class="service-list-item">
+                <i class="fas fa-check"></i> <span id="jasa-3"></span>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; Copyright DND STORE 2026
+        </div>
+    </div>
+
+    <script>
+        const WA_ADMIN = "https://wa.me/6285122534702";
+        const TELE_ADMIN = "https://t.me/dndstoreontele";
+        
+        const WA_CHANNEL = "https://whatsapp.com/channel/0029Vb6C5jL4SpkIgR7iD841";
+        const TELE_CHANNEL = "https://t.me/dndstoreontele";
+        
+        const BOT_1_NAME = "Beli Panel Pterodacty Hitungan Detikl";
+        const BOT_1_LINK = "https://t.me/dndpanelbot";
+        const BOT_2_NAME = "Premiumin Akun Alight Motion";
+        const BOT_2_LINK = "https://t.me/dndambot";
+        
+        const API_1_NAME = "Web API Alight Motion";
+        const API_1_LINK = "https://am.dndonly.my.id";
+        const API_2_NAME = "Rest API Website";
+        const API_2_LINK = "https://api.dndonly.my.id";
+        
+        const TEKS_JALAN = "✦ Solusi Kebutuhan Digital Anda ✦ DND DEVELOPMENT ✦ Pelayanan Cepat & Terpercaya ✦";
+        
+        const LAYANAN_1 = "Berbagai Source Code Premium";
+        const LAYANAN_2 = "Jasa Pembuatan Bot Custom";
+        const LAYANAN_3 = "Jasa Pembuatan Website API";
+
+        document.getElementById("link-wa-admin").href = WA_ADMIN;
+        document.getElementById("link-tele-admin").href = TELE_ADMIN;
+        
+        document.getElementById("link-wa-channel").href = WA_CHANNEL;
+        document.getElementById("link-tele-channel").href = TELE_CHANNEL;
+        
+        document.getElementById("nama-bot-1").innerText = BOT_1_NAME;
+        document.getElementById("link-bot-1").href = BOT_1_LINK;
+        document.getElementById("nama-bot-2").innerText = BOT_2_NAME;
+        document.getElementById("link-bot-2").href = BOT_2_LINK;
+        
+        document.getElementById("nama-api-1").innerText = API_1_NAME;
+        document.getElementById("link-api-1").href = API_1_LINK;
+        document.getElementById("nama-api-2").innerText = API_2_NAME;
+        document.getElementById("link-api-2").href = API_2_LINK;
+        
+        document.getElementById("teks-berjalan").innerText = TEKS_JALAN + " " + TEKS_JALAN;
+        
+        document.getElementById("jasa-1").innerText = LAYANAN_1;
+        document.getElementById("jasa-2").innerText = LAYANAN_2;
+        document.getElementById("jasa-3").innerText = LAYANAN_3;
+    </script>
+</body>
+</html>
