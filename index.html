@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DND DEVELOPMENT</title>
+    <link rel="icon" type="image/jpeg" href="14853.jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -47,7 +48,7 @@
             color: #ffffff;
             text-transform: uppercase;
             text-shadow: 0 0 5px rgba(255,255,255,0.5);
-            animation: marquee 15s linear infinite;
+            animation: marquee 30s linear infinite;
         }
 
         @keyframes marquee {
@@ -236,6 +237,9 @@
             <div class="service-list-item">
                 <i class="fas fa-check"></i> <span id="jasa-3"></span>
             </div>
+            <div class="service-list-item">
+                <i class="fas fa-check"></i> <span id="jasa-4"></span>
+            </div>
         </div>
 
         <div class="footer">
@@ -260,11 +264,12 @@
         const API_2_NAME = "Rest API Website";
         const API_2_LINK = "https://api.dndonly.my.id";
         
-        const TEKS_JALAN = "✦ Solusi Kebutuhan Digital Anda ✦ DND DEVELOPMENT ✦ Pelayanan Cepat & Terpercaya ✦";
+        const TEKS_JALAN = "Solusi Kebutuhan Digital Anda ✦ DND DEVELOPMENT ✦ Pelayanan Cepat & Terpercaya ✦";
         
-        const LAYANAN_1 = "Berbagai Source Code Premium";
-        const LAYANAN_2 = "Jasa Pembuatan Bot Custom";
-        const LAYANAN_3 = "Jasa Pembuatan Website API";
+        const LAYANAN_1 = "Source Code Bot / Web";
+        const LAYANAN_2 = "Jasa Pembuatan Web / Bot Custom";
+        const LAYANAN_3 = "Sewa Bot WhatsApp";
+        const LAYANAN_4 = "Sewa Panel Pterodactyl & VPS";
 
         document.getElementById("link-wa-admin").href = WA_ADMIN;
         document.getElementById("link-tele-admin").href = TELE_ADMIN;
@@ -287,6 +292,7 @@
         document.getElementById("jasa-1").innerText = LAYANAN_1;
         document.getElementById("jasa-2").innerText = LAYANAN_2;
         document.getElementById("jasa-3").innerText = LAYANAN_3;
+        document.getElementById("jasa-4").innerText = LAYANAN_4;
     </script>
 </body>
 </html>
