@@ -194,10 +194,12 @@
             position: relative;
         }
 
-        .hero-mascot {
-            font-size: clamp(150px, 25vw, 220px);
-            color: #00f3ff;
-            filter: drop-shadow(0 0 40px rgba(0, 243, 255, 0.6));
+        /* Styling untuk Gambar Maskot Bot */
+        .hero-mascot-img {
+            width: clamp(200px, 30vw, 320px);
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 30px rgba(0, 243, 255, 0.5));
             animation: float 4s ease-in-out infinite;
         }
 
@@ -799,7 +801,8 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <i class="fas fa-robot hero-mascot"></i>
+                <!-- Ganti "robot.png" dengan nama file gambar yang lu upload ke GitHub -->
+                <img src="robot.png" alt="Mascot Bot" class="hero-mascot-img">
             </div>
         </div>
     </section>
