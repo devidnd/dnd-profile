@@ -45,7 +45,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 8%;
-            background: rgba(5, 5, 5, 0.8);
+            background: rgba(5, 5, 5, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0, 243, 255, 0.15);
@@ -85,6 +85,62 @@
         }
 
         .nav-links a:hover {
+            color: #00f3ff;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            color: #00f3ff;
+            cursor: pointer;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .hamburger:hover {
+            background: rgba(0, 243, 255, 0.2);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: rgba(8, 8, 8, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 30px 0;
+            transform: translateY(-150%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        .mobile-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .mobile-menu a:hover {
             color: #00f3ff;
             text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
         }
@@ -194,7 +250,6 @@
             position: relative;
         }
 
-        /* Styling untuk Gambar Maskot Bot */
         .hero-mascot-img {
             width: clamp(200px, 30vw, 320px);
             height: auto;
@@ -755,11 +810,12 @@
 
         @media (max-width: 850px) {
             .nav-links { display: none; }
+            .hamburger { display: flex; }
             section { padding: 90px 5% 50px 5%; }
             #home { padding-top: 100px; }
             .hero-container { flex-direction: column; text-align: center; gap: 30px;}
             .hero-buttons { justify-content: center; }
-            .hero-mascot { margin-top: 0; }
+            .hero-mascot-img { margin-top: 0; }
             .about-content { flex-direction: column; padding: 30px 20px; gap: 30px;}
             .about-text { text-align: center; }
             .about-stats { grid-template-columns: 1fr; }
@@ -788,7 +844,18 @@
             <a href="#pricing">Program Partner</a>
             <a href="#contact">Contact Us</a>
         </div>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="toggleMobileMenu()">Home</a>
+        <a href="#about" onclick="toggleMobileMenu()">Tentang Kami</a>
+        <a href="#produk" onclick="toggleMobileMenu()">Katalog Script</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">Program Partner</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact Us</a>
+    </div>
 
     <section id="home">
         <div class="hero-container">
@@ -801,7 +868,6 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <!-- Ganti "robot.png" dengan nama file gambar yang lu upload ke GitHub -->
                 <img src="robot.png" alt="Mascot Bot" class="hero-mascot-img">
             </div>
         </div>
@@ -921,6 +987,19 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('hamburgerIcon');
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+
         const namaPartnerResmi = [
             { nama: "Partner 1", tipe: "VIP Partner" },
             { nama: "Partner 2", tipe: "Basic Partner" }
