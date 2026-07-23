@@ -48,7 +48,7 @@
             background: rgba(5, 5, 5, 0.8);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.15);
             z-index: 1000;
         }
 
@@ -85,8 +85,8 @@
         }
 
         .nav-links a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            color: #00f3ff;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
         }
 
         section {
@@ -146,7 +146,7 @@
         }
 
         .btn-primary {
-            background: #ffffff;
+            background: #00f3ff;
             color: #000000;
             padding: 16px 35px;
             border-radius: 50px;
@@ -155,31 +155,34 @@
             font-size: 15px;
             transition: all 0.3s ease;
             text-align: center;
+            border: 2px solid #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
         }
 
         .btn-primary:hover {
-            background: #00f3ff;
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+            background: transparent;
+            color: #00f3ff;
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.6);
             transform: translateY(-2px);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: #ffffff;
+            background: rgba(188, 19, 254, 0.1);
+            color: #bc13fe;
             padding: 16px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             font-size: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(188, 19, 254, 0.5);
             transition: all 0.3s ease;
             text-align: center;
         }
 
         .btn-secondary:hover {
-            background: rgba(188, 19, 254, 0.1);
-            border-color: #bc13fe;
-            color: #bc13fe;
+            background: #bc13fe;
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(188, 19, 254, 0.5);
             transform: translateY(-2px);
         }
 
@@ -228,8 +231,8 @@
             display: flex;
             gap: 50px;
             align-items: center;
-            background: rgba(20, 20, 20, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(15, 15, 15, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.2);
             border-radius: 30px;
             padding: 50px;
             backdrop-filter: blur(10px);
@@ -243,6 +246,11 @@
             line-height: 1.8;
         }
 
+        .about-text strong {
+            color: #00f3ff;
+            font-weight: 800;
+        }
+
         .about-stats {
             flex: 1;
             display: grid;
@@ -252,11 +260,18 @@
         }
 
         .stat-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(0, 243, 255, 0.03);
+            border: 1px solid rgba(0, 243, 255, 0.1);
             padding: 25px 15px;
             border-radius: 20px;
             text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 243, 255, 0.4);
+            box-shadow: 0 10px 20px rgba(0, 243, 255, 0.1);
         }
 
         .stat-num {
@@ -264,6 +279,7 @@
             font-weight: 900;
             color: #00f3ff;
             margin-bottom: 5px;
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
         }
 
         .stat-label {
@@ -281,7 +297,7 @@
         }
 
         .product-card {
-            background: rgba(20, 20, 20, 0.6);
+            background: rgba(15, 15, 15, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 24px;
             padding: 35px 25px;
@@ -294,8 +310,8 @@
         .product-card:hover {
             transform: translateY(-10px);
             border-color: rgba(0, 243, 255, 0.5);
-            background: rgba(30, 30, 30, 0.8);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 243, 255, 0.05);
+            background: rgba(20, 20, 20, 0.8);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 243, 255, 0.05);
         }
 
         .product-icon {
@@ -309,6 +325,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 18px;
+            border: 1px solid rgba(0, 243, 255, 0.2);
         }
 
         .product-title {
@@ -323,6 +340,7 @@
             font-weight: 900;
             color: #bc13fe;
             margin-bottom: 25px;
+            opacity: 0.9;
         }
 
         .product-btn {
@@ -341,7 +359,7 @@
 
         .product-card:hover .product-btn {
             background: #00f3ff;
-            color: #000;
+            color: #000000;
             border-color: #00f3ff;
             box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
         }
@@ -356,7 +374,7 @@
         }
 
         .pricing-card {
-            background: rgba(20, 20, 20, 0.4);
+            background: rgba(15, 15, 15, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 30px;
             padding: 45px 30px;
@@ -364,6 +382,12 @@
             position: relative;
             overflow: hidden;
             width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            border-color: rgba(0, 243, 255, 0.3);
+            background: rgba(20, 20, 20, 0.6);
         }
 
         .pricing-card.vip {
@@ -372,9 +396,28 @@
             box-shadow: 0 0 40px rgba(188, 19, 254, 0.15);
         }
 
+        .pricing-card.vip::before {
+            content: 'ALL ACCESS';
+            position: absolute;
+            top: 25px;
+            right: -40px;
+            background: #bc13fe;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 900;
+            padding: 5px 45px;
+            transform: rotate(45deg);
+            letter-spacing: 2px;
+        }
+
         .pricing-icon {
             font-size: 45px;
             margin-bottom: 20px;
+            color: #00f3ff;
+        }
+
+        .pricing-card.vip .pricing-icon {
+            color: #bc13fe;
         }
 
         .pricing-title {
@@ -387,6 +430,11 @@
             font-size: clamp(28px, 6vw, 36px);
             font-weight: 900;
             margin-bottom: 10px;
+            color: #00f3ff;
+        }
+
+        .pricing-card.vip .pricing-price {
+            color: #bc13fe;
         }
 
         .pricing-note {
@@ -411,25 +459,90 @@
         }
 
         .btn-basic {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 243, 255, 0.3);
             color: #fff;
         }
 
         .btn-basic:hover {
-            background: #fff;
+            background: #00f3ff;
             color: #000;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
         }
 
         .btn-vip {
             background: #bc13fe;
-            color: #fff;
-            box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(188, 19, 254, 0.3);
         }
 
         .btn-vip:hover {
-            background: #fff;
+            background: #ffffff;
             color: #bc13fe;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        .grid-partners {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .partner-box {
+            background: rgba(20, 20, 20, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .partner-box:hover {
+            background: rgba(0, 243, 255, 0.05);
+            border-color: rgba(0, 243, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 243, 255, 0.1);
+        }
+
+        .partner-icon {
+            font-size: 35px;
+            color: #00f3ff;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .partner-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .partner-badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 15px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .badge-vip {
+            background: rgba(188, 19, 254, 0.2);
+            color: #bc13fe;
+            border: 1px solid #bc13fe;
+        }
+
+        .badge-basic {
+            background: transparent;
+            border: 1px solid #00f3ff;
+            color: #00f3ff;
         }
 
         .contact-grid {
@@ -453,7 +566,7 @@
             gap: 15px;
             text-decoration: none;
             color: #fff;
-            transition: all 0.4s;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             overflow: hidden;
             z-index: 1;
         }
@@ -483,13 +596,14 @@
         .contact-card:hover {
             transform: translateY(-5px);
             border-color: var(--hover-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
 
         .contact-icon-wrapper {
             width: 50px;
             height: 50px;
             border-radius: 14px;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
@@ -528,13 +642,60 @@
             color: #dddddd;
         }
 
+        .grid-thanks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .thanks-box {
+            background: rgba(15, 15, 15, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .thanks-box:hover {
+            border-color: #00f3ff;
+            background: rgba(0, 243, 255, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 243, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .thanks-icon {
+            font-size: 35px;
+            color: #00f3ff;
+            margin-bottom: 15px;
+        }
+
+        .thanks-name {
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .thanks-msg {
+            font-size: 13px;
+            color: #aaaaaa;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
         footer {
             text-align: center;
             padding: 30px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #555;
+            border-top: 1px solid rgba(0, 243, 255, 0.2);
+            color: #888;
             font-size: 13px;
-            background: #000;
+            background: rgba(5, 5, 5, 0.9);
             z-index: 2;
             position: relative;
             width: 100%;
@@ -543,7 +704,7 @@
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(8px);
             display: flex; justify-content: center; align-items: center;
             z-index: 2000; opacity: 0; visibility: hidden; transition: all 0.3s ease;
@@ -553,7 +714,7 @@
         .modal-overlay.active { opacity: 1; visibility: visible; }
 
         .modal-box {
-            background: rgba(15, 15, 15, 0.95);
+            background: #0f0f0f;
             border: 1px solid #00f3ff;
             border-radius: 24px;
             padding: 30px 25px;
@@ -569,8 +730,10 @@
 
         .modal-close {
             position: absolute; top: 15px; right: 20px;
-            font-size: 28px; color: #fff; cursor: pointer;
+            font-size: 28px; color: #fff; cursor: pointer; transition: 0.3s;
         }
+        
+        .modal-close:hover { color: #00f3ff; }
 
         .modal-title { font-size: 22px; font-weight: 900; color: #00f3ff; margin-bottom: 5px; }
         .modal-price { font-size: 18px; font-weight: 800; color: #bc13fe; margin-bottom: 5px; }
@@ -581,12 +744,13 @@
         .modal-list li i { color: #00f3ff; font-size: 12px; margin-top: 3px; }
         
         .modal-btn-buy {
-            display: block; width: 100%; background: #00f3ff; color: #000; text-align: center;
+            display: block; width: 100%; background: #00f3ff; color: #000000; text-align: center;
             padding: 14px; border-radius: 12px; font-weight: 900; text-decoration: none;
-            margin-top: 20px; transition: all 0.3s; font-size: 14px;
+            margin-top: 20px; transition: all 0.3s; font-size: 14px; box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
         }
+        
+        .modal-btn-buy:hover { background: #ffffff; box-shadow: 0 0 25px rgba(255, 255, 255, 0.6); }
 
-        /* PERBAIKAN UNTUK SEMUA LAYAR HP & TABLET */
         @media (max-width: 850px) {
             .nav-links { display: none; }
             section { padding: 90px 5% 50px 5%; }
@@ -594,15 +758,14 @@
             .hero-container { flex-direction: column; text-align: center; gap: 30px;}
             .hero-buttons { justify-content: center; }
             .hero-mascot { margin-top: 0; }
-            
             .about-content { flex-direction: column; padding: 30px 20px; gap: 30px;}
             .about-text { text-align: center; }
             .about-stats { grid-template-columns: 1fr; }
-            
-            .grid-products, .grid-pricing, .contact-grid { 
+            .grid-products, .grid-pricing, .contact-grid, .grid-thanks { 
                 grid-template-columns: 1fr; 
                 gap: 20px;
             }
+            .grid-partners { grid-template-columns: repeat(2, 1fr); gap: 15px; }
             .pricing-card { padding: 35px 20px; }
         }
     </style>
@@ -644,13 +807,13 @@
     <section id="about">
         <div class="section-header">
             <h2>Profil <span class="text-gradient">Perusahaan</span></h2>
-            <p>Mengenal lebih dekat siapa DND Development dan apa komitmen kami.</p>
+            <p>Mengenal lebih dekat siapa kami dan komitmen DND Development.</p>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <p><strong>DND Development</strong> adalah penyedia solusi digital, automation bot, dan pengembangan web API profesional di Indonesia. Kami berfokus untuk menghadirkan layanan berkualitas tinggi, stabil, dan cepat bagi developer, reseller, maupun pebisnis digital.</p>
+                <p>Di <strong>DND Development</strong>, kami percaya bahwa teknologi harus mempermudah jalanmu, bukan malah bikin ribet. Kami hadir sebagai partner di balik layar untuk para <em>tech-preneur</em>, reseller, dan developer yang butuh amunisi tempur digital—mulai dari <em>automation bot</em>, Web API super cepat, hingga sistem Panel Pterodactyl yang solid.</p>
                 <br>
-                <p>Dengan pengalaman dalam pengelolaan server, pembuatan bot custom, dan penyediaan source code premium, kami siap membantu meningkatkan skalabilitas bisnis digital Anda ke level berikutnya.</p>
+                <p>Nggak usah pusing mikirin kodingan error atau server down. Fokus aja gedein profit dan jualan, urusan infrastruktur digital dan script premium, percayakan penuh sama ahlinya. 🚀</p>
             </div>
             <div class="about-stats">
                 <div class="stat-box">
@@ -682,23 +845,32 @@
         <div class="grid-pricing">
             
             <div class="pricing-card" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
-                <i class="fas fa-user-shield pricing-icon" style="color: #00f3ff;"></i>
+                <i class="fas fa-user-shield pricing-icon"></i>
                 <h3 class="pricing-title">Basic</h3>
                 <div class="pricing-desc" style="color:#888; font-size:13px; margin-bottom:15px;">Mulai bangun aset digitalmu.</div>
-                <div class="pricing-price" style="color: #00f3ff;">Rp 300.000</div>
+                <div class="pricing-price">Rp 300.000</div>
                 <div class="pricing-note">*Biaya perpanjangan membership / pembaruan support berkala dikenakan di tahun berikutnya.</div>
                 <button onclick="openModal('basic')" class="pricing-btn btn-basic">Lihat Keuntungan</button>
             </div>
 
             <div class="pricing-card vip" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.2">
-                <i class="fas fa-crown pricing-icon" style="color: #bc13fe;"></i>
+                <i class="fas fa-crown pricing-icon"></i>
                 <h3 class="pricing-title">VIP Access</h3>
-                <div class="pricing-desc" style="color:#888; font-size:13px; margin-bottom:15px;">All access untuk bisnis skala penuh.</div>
-                <div class="pricing-price" style="color: #bc13fe;">Rp 500.000<span style="font-size: 14px; color:#888;">/thn</span></div>
-                <div class="pricing-note">*Biaya perpanjangan membership tahun berikutnya menyesuaikan ketentuan aktif.</div>
+                <div class="pricing-desc" style="color:#aaa; font-size:13px; margin-bottom:15px;">All access untuk bisnis skala penuh.</div>
+                <div class="pricing-price">Rp 500.000<span style="font-size: 14px; color:#aaa;">/thn</span></div>
+                <div class="pricing-note" style="color: #aaa;">*Biaya perpanjangan membership tahun berikutnya menyesuaikan ketentuan aktif.</div>
                 <button onclick="openModal('vip')" class="pricing-btn btn-vip">Lihat Keuntungan</button>
             </div>
 
+        </div>
+    </section>
+
+    <section id="partners">
+        <div class="section-header">
+            <h2>Partner Resmi <span class="text-gradient">DND</span></h2>
+            <p>Daftar partner terpercaya yang telah bergabung dengan ekosistem kami.</p>
+        </div>
+        <div class="grid-partners" id="partnerListGrid">
         </div>
     </section>
 
@@ -708,6 +880,14 @@
             <p>Butuh bantuan instalasi atau pembuatan project custom? Admin kami selalu sedia.</p>
         </div>
         <div class="contact-grid" id="contactGrid">
+        </div>
+    </section>
+
+    <section id="thanks" style="padding-top: 50px;">
+        <div class="section-header" style="margin-bottom: 40px;">
+            <h2>Special <span class="text-gradient">Thanks</span></h2>
+        </div>
+        <div class="grid-thanks" id="thanksListGrid">
         </div>
     </section>
 
@@ -738,17 +918,107 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
+        const namaPartnerResmi = [
+            { nama: "Partner 1", tipe: "VIP Partner" },
+            { nama: "Partner 2", tipe: "Basic Partner" }
+        ];
+
+        const namaSpecialThanks = [
+            { 
+                nama: "Lien", 
+                pesan: "Terima kasih atas segala dukungan dan ide-ide kreatifnya. Perjalanan ini tentu terasa berbeda dan jauh lebih seru berkat support dari kamu." 
+            },
+            { 
+                nama: "Vena", 
+                pesan: "Terima kasih banyak atas dedikasi dan bantuannya dalam memasarkan serta memperluas jangkauan produk kami." 
+            },
+            { 
+                nama: "Kyuurzy", 
+                pesan: "Terima kasih atas bantuan teknis dalam proses development serta arahannya. Peranmu sangat krusial hingga kami bisa sebesar sekarang." 
+            }
+        ];
+
         const products = [
             { name: "Aeri Bot v1.7 (Store)", price: "Rp 50.000", icon: "fa-robot", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v1.7%20Store", btn: "Order Now" },
             { name: "Aeri Bot v1.7 Store + AM", price: "Rp 75.000", icon: "fa-layer-group", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v1.7%20Store%20+%20Fitur%20AM", btn: "Order Now" },
             { name: "Aeri Bot v2.7 (Bot MD)", price: "Rp 75.000", icon: "fa-rocket", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v2.7%20MD", btn: "Order Now" },
             { name: "Aeri Bot v2.7 MD + AM", price: "Rp 100.000", icon: "fa-bolt", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v2.7%20MD%20+%20Fitur%20AM", btn: "Order Now" },
             { name: "Script Gummy AM Telegram", price: "Rp 60.000", icon: "fa-paper-plane", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20Gummy%20AM%20Telegram", btn: "Order Now" },
-            { name: "Script OTP Netflix & Disney", price: "Rp 40.000", icon: "fa-key", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20OTP%20Netflix%20Disney", btn: "Order Now" },
+            { name: "Script OTP Netflix", price: "Rp 150.000", icon: "fa-film", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20OTP%20Netflix", btn: "Order Now" },
+            { name: "Script OTP Disney", price: "Rp 150.000", icon: "fa-magic", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20OTP%20Disney", btn: "Order Now" },
             { name: "Script Tmail", price: "Rp 35.000", icon: "fa-envelope-open-text", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20Tmail", btn: "Order Now" },
             { name: "Web API Alight Motion", price: "Live Project", icon: "fa-globe", link: "https://am.dndonly.my.id", btn: "Kunjungi Sekarang" },
             { name: "Rest API Website", price: "Live Project", icon: "fa-server", link: "https://api.dndonly.my.id", btn: "Kunjungi Sekarang" }
         ];
+
+        const contacts = [
+            { name: "WhatsApp Admin", desc: "Konsultasi & order via chat", icon: "fab fa-whatsapp", link: "https://wa.me/6285122534702", color: "#25D366" },
+            { name: "Telegram Admin", desc: "Hubungi admin via Telegram", icon: "fab fa-telegram", link: "https://t.me/dndstoreontele", color: "#0088cc" },
+            { name: "Channel WhatsApp", desc: "Update info & promo terbaru", icon: "fab fa-whatsapp", link: "https://whatsapp.com/channel/0029Vb6C5jL4SpkIgR7iD841", color: "#25D366" },
+            { name: "Channel Telegram", desc: "Join komunitas & info eksklusif", icon: "fab fa-telegram", link: "https://t.me/dndstoreontele", color: "#0088cc" }
+        ];
+
+        const partnerData = {
+            basic: {
+                title: "Partner Script Basic",
+                price: "Rp 300.000",
+                note: "* Biaya perpanjangan membership/support dikenakan pada periode berikutnya.",
+                benefits: [
+                    "Lisensi resmi untuk me-resell (menjual ulang) seluruh script paket Basic.",
+                    "Margin profit 100% masuk ke kantongmu tanpa potongan apapun.",
+                    "Panduan teknis dasar instalasi langsung dari tim developer."
+                ],
+                gets: [
+                    "Aeri Bot v1.7 (Versi Biasa & Store + Fitur AM)",
+                    "Script Gummy AM Telegram v1 (Bulk) & v2 (Satuan)",
+                    "Akses masuk ke Grup Komunitas Reseller Eksklusif",
+                    "Layanan support & troubleshooting standar"
+                ],
+                link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20gabung%20Partner%20Script%20Basic%20Rp300.000"
+            },
+            vip: {
+                title: "Partner Script VIP",
+                price: "Rp 500.000 / Tahun",
+                note: "* Biaya perpanjangan membership tahun berikutnya menyesuaikan ketentuan aktif.",
+                benefits: [
+                    "All-Access Pass ke seluruh katalog Script & Bot DND Development.",
+                    "Lisensi VIP: Bebas jual ulang semua produk tanpa batas (Unlimited).",
+                    "Profit margin mutlak 100% jadi milikmu seutuhnya.",
+                    "Prioritas update fitur gratis & garansi maintenance selama masa aktif."
+                ],
+                gets: [
+                    "Semua Versi Aeri Bot (v1.7 & v2.7 MD + Fitur AM)",
+                    "Script Gummy AM Telegram v1 & v2",
+                    "Script OTP Netflix, Script OTP Disney, dan Script Tmail",
+                    "Gratis pembaruan script ke versi terbaru (Lifetime selama aktif)",
+                    "Akses ke Private Channel & Grup Diskusi VIP Khusus Partner"
+                ],
+                link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20gabung%20Partner%20Script%20VIP%20Rp500.000"
+            }
+        };
+
+        const partnerGrid = document.getElementById('partnerListGrid');
+        namaPartnerResmi.forEach(p => {
+            const badgeClass = p.tipe.includes("VIP") ? "badge-vip" : "badge-basic";
+            partnerGrid.innerHTML += `
+                <div class="partner-box">
+                    <i class="fas fa-user-circle partner-icon"></i>
+                    <div class="partner-name">${p.nama}</div>
+                    <div class="partner-badge ${badgeClass}">${p.tipe}</div>
+                </div>
+            `;
+        });
+
+        const thanksGrid = document.getElementById('thanksListGrid');
+        namaSpecialThanks.forEach(t => {
+            thanksGrid.innerHTML += `
+                <div class="thanks-box">
+                    <i class="fas fa-handshake thanks-icon"></i>
+                    <div class="thanks-name">${t.nama}</div>
+                    <div class="thanks-msg">"${t.pesan}"</div>
+                </div>
+            `;
+        });
 
         const productGrid = document.getElementById('productGrid');
         products.forEach(p => {
@@ -762,13 +1032,6 @@
             `;
         });
 
-        const contacts = [
-            { name: "WhatsApp Admin", desc: "Konsultasi & order via chat", icon: "fab fa-whatsapp", link: "https://wa.me/6285122534702", color: "#25D366" },
-            { name: "Telegram Admin", desc: "Hubungi admin via Telegram", icon: "fab fa-telegram", link: "https://t.me/dndstoreontele", color: "#0088cc" },
-            { name: "Channel WhatsApp", desc: "Update info & promo terbaru", icon: "fab fa-whatsapp", link: "https://whatsapp.com/channel/0029Vb6C5jL4SpkIgR7iD841", color: "#25D366" },
-            { name: "Channel Telegram", desc: "Join komunitas & info eksklusif", icon: "fab fa-telegram", link: "https://t.me/dndstoreontele", color: "#0088cc" }
-        ];
-
         const contactGrid = document.getElementById('contactGrid');
         contacts.forEach(c => {
             contactGrid.innerHTML += `
@@ -780,49 +1043,10 @@
                         <h4>${c.name}</h4>
                         <p>${c.desc}</p>
                     </div>
-                    <i class="fas fa-chevron-right contact-arrow"></i>
+                    <i class="fas fa-chevron-right contact-arrow" style="color: rgba(255,255,255,0.2);"></i>
                 </a>
             `;
         });
-
-        const partnerData = {
-            basic: {
-                title: "Partner Script Basic",
-                price: "Rp 300.000",
-                note: "* Biaya perpanjangan membership/support dikenakan pada periode berikutnya.",
-                benefits: [
-                    "Bisa menjual kembali script paket Basic ke orang lain",
-                    "Keuntungan penjualan 100% milik sendiri",
-                    "Mendapat bimbingan dasar penggunaan script"
-                ],
-                gets: [
-                    "Aeri Bot v1.7 (Versi Biasa & Store + Fitur AM)",
-                    "Script Gummy AM Telegram v1 (Bulk) & v2 (Satuan)",
-                    "Masuk grup reseller & info update basic",
-                    "Dukungan teknis standar dari admin"
-                ],
-                link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20gabung%20Partner%20Script%20Basic%20Rp300.000"
-            },
-            vip: {
-                title: "Partner Script VIP",
-                price: "Rp 500.000 / Tahun",
-                note: "* Biaya perpanjangan membership tahun berikutnya menyesuaikan ketentuan aktif.",
-                benefits: [
-                    "Akses ALL ACCESS ke SEMUA script DND Development",
-                    "Hak penuh untuk jualan semua script tanpa batas",
-                    "Keuntungan penjualan 100% milik sendiri",
-                    "Membership aktif & update gratis selama 1 Tahun Penuh"
-                ],
-                gets: [
-                    "Semua Versi Aeri Bot (v1.7 & v2.7 MD + Fitur AM)",
-                    "Script Gummy AM Telegram v1 & v2",
-                    "Script OTP Netflix & Disney serta Script Tmail",
-                    "Akses update script selamanya selama masa aktif",
-                    "Masuk grup VIP Eksklusif & Private Channel"
-                ],
-                link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20gabung%20Partner%20Script%20VIP%20Rp500.000"
-            }
-        };
 
         function openModal(type) {
             const data = partnerData[type];
@@ -855,9 +1079,9 @@
                 "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
                 "color": { "value": "#00f3ff" },
                 "shape": { "type": "circle" },
-                "opacity": { "value": 0.3, "random": true },
+                "opacity": { "value": 0.5, "random": true },
                 "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#00f3ff", "opacity": 0.15, "width": 1 },
+                "line_linked": { "enable": true, "distance": 150, "color": "#00f3ff", "opacity": 0.2, "width": 1 },
                 "move": { "enable": true, "speed": 1.2, "direction": "none", "random": true, "out_mode": "out" }
             },
             "interactivity": {
