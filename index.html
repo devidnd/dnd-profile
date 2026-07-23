@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DND DEVELOPMENT</title>
+    <title>DND DEVELOPMENT - Premium Digital Solutions</title>
     <link rel="icon" type="image/jpeg" href="14853.jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
         
         body {
-            background: #000000;
+            background-color: #050505;
             color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px 40px 20px;
             overflow-x: hidden;
+            display: block; 
         }
 
         #particles-js {
@@ -32,328 +31,458 @@
             top: 0;
             left: 0;
             z-index: -1;
-            background-color: #000000;
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
         }
 
-        .marquee-container {
+        nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 243, 255, 0.3);
-            padding: 10px 0;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            background: rgba(5, 5, 5, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 243, 255, 0.15);
         }
 
-        .marquee-text {
-            display: inline-block;
-            white-space: nowrap;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: #00f3ff;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
-            animation: marquee 30s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(100vw); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .glass-container {
-            background: rgba(10, 10, 10, 0.6);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-top: 1px solid rgba(0, 243, 255, 0.4);
-            border-bottom: 1px solid rgba(188, 19, 254, 0.4);
-            border-radius: 20px;
-            padding: 40px 30px;
-            width: 100%;
-            max-width: 420px;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.05);
-            position: relative;
-            transform-style: preserve-3d;
-        }
-
-        .robot-mascot {
-            position: absolute;
-            top: -35px;
-            right: 15px;
-            font-size: 45px;
-            color: #00f3ff;
-            filter: drop-shadow(0 0 15px #00f3ff);
-            animation: floatingRobot 3s ease-in-out infinite;
-            transform: translateZ(50px);
-        }
-
-        @keyframes floatingRobot {
-            0%, 100% { transform: translateY(0) rotate(-5deg) translateZ(50px); }
-            50% { transform: translateY(-15px) rotate(5deg) translateZ(50px); }
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #00f3ff;
-            margin-bottom: 15px;
-            box-shadow: 0 0 25px rgba(0, 243, 255, 0.5);
-            transform: translateZ(30px);
-            transition: all 0.3s ease;
-        }
-        
-        .logo:hover {
-            box-shadow: 0 0 35px rgba(188, 19, 254, 0.8);
-            border-color: #bc13fe;
-        }
-
-        h1 {
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(255,255,255,0.5);
-            transform: translateZ(20px);
-        }
-
-        p.subtitle {
-            font-size: 13px;
-            color: #aaaaaa;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-            transform: translateZ(20px);
-        }
-
-        .section-title {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #ffffff;
-            margin: 30px 0 15px 0;
-            text-align: center;
+        .nav-brand {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
-            transform: translateZ(10px);
-        }
-        
-        .section-title i {
-            color: #00f3ff;
+            gap: 15px;
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-decoration: none;
         }
 
-        .link-btn {
+        .nav-brand img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        section {
+            padding: 120px 8% 80px 8%;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 150px;
+        }
+
+        .hero-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(255, 255, 255, 0.03);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 20px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
-            font-weight: 500;
-            font-size: 14px;
-            position: relative;
-            overflow: hidden;
-            transform: translateZ(15px);
-            cursor: pointer;
+            width: 100%;
+            gap: 50px;
         }
 
-        .link-btn:hover {
-            background: rgba(0, 243, 255, 0.1);
-            color: #ffffff;
-            border-color: #00f3ff;
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4), inset 0 0 10px rgba(0, 243, 255, 0.2);
-            transform: translateY(-3px) translateZ(25px);
+        .hero-text {
+            flex: 1;
+            max-width: 650px;
         }
 
-        .link-content {
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #00f3ff, #bc13fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            gap: 20px;
         }
 
-        .price-badge {
-            background: rgba(0, 243, 255, 0.2);
-            border: 1px solid #00f3ff;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            color: #00f3ff;
-        }
-
-        .icon {
-            font-size: 20px;
+        .btn-primary {
+            background: #ffffff;
+            color: #000000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 15px;
             transition: all 0.3s ease;
         }
 
-        .services-list {
-            text-align: left;
-            margin-top: 10px;
-            padding: 0 10px;
-            transform: translateZ(10px);
+        .btn-primary:hover {
+            background: #00f3ff;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+            transform: translateY(-2px);
         }
 
-        .service-list-item {
-            padding: 12px 0;
-            font-size: 14px;
-            color: #dddddd;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
         }
 
-        .service-list-item:last-child {
-            border-bottom: none;
-        }
-        
-        .service-list-item i {
+        .btn-secondary:hover {
+            background: rgba(188, 19, 254, 0.1);
+            border-color: #bc13fe;
             color: #bc13fe;
-            font-size: 18px;
-            text-shadow: 0 0 10px rgba(188, 19, 254, 0.8);
+            transform: translateY(-2px);
         }
 
-        .footer {
-            margin-top: 40px;
-            font-size: 12px;
-            color: #666666;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transform: translateZ(10px);
-        }
-
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
+        .hero-visual {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 2000;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0,243,255,0.2) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+        }
+
+        .hero-mascot {
+            font-size: 220px;
+            color: #00f3ff;
+            filter: drop-shadow(0 0 40px rgba(0, 243, 255, 0.6));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-30px) rotate(2deg); }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            color: #888888;
+            font-size: 1.1rem;
+        }
+
+        .grid-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 40px 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 243, 255, 0.5);
+            background: rgba(30, 30, 30, 0.8);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 243, 255, 0.05);
+        }
+
+        .product-icon {
+            font-size: 40px;
+            color: #00f3ff;
+            margin-bottom: 25px;
+            background: rgba(0, 243, 255, 0.1);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 900;
+            color: #bc13fe;
+            margin-bottom: 25px;
+        }
+
+        .product-btn {
+            margin-top: auto;
+            width: 100%;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover .product-btn {
+            background: #00f3ff;
+            color: #000;
+            border-color: #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        .grid-pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: rgba(20, 20, 20, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.vip {
+            background: linear-gradient(145deg, rgba(30, 30, 30, 0.9), rgba(15, 15, 15, 0.9));
+            border: 1px solid #bc13fe;
+            box-shadow: 0 0 40px rgba(188, 19, 254, 0.15);
+        }
+
+        .pricing-card.vip::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #bc13fe;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 900;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            letter-spacing: 2px;
+        }
+
+        .pricing-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .pricing-title {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .pricing-price {
+            font-size: 40px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+
+        .pricing-desc {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        .pricing-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+
+        .btn-basic {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .btn-basic:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .btn-vip {
+            background: #bc13fe;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
+        }
+
+        .btn-vip:hover {
+            background: #fff;
+            color: #bc13fe;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #555;
+            font-size: 14px;
+            background: #000;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* MODAL TETAP SAMA KARENA UDAH BAGUS */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 2000; opacity: 0; visibility: hidden; transition: all 0.3s ease;
             padding: 20px;
         }
 
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
 
         .modal-box {
             background: rgba(15, 15, 15, 0.95);
             border: 1px solid #00f3ff;
-            border-radius: 20px;
-            padding: 30px;
-            width: 100%;
-            max-width: 400px;
-            text-align: left;
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+            border-radius: 24px;
+            padding: 40px;
+            width: 100%; max-width: 450px;
+            box-shadow: 0 0 40px rgba(0, 243, 255, 0.2);
             position: relative;
-            transform: scale(0.8);
-            transition: all 0.3s ease;
+            transform: scale(0.8); transition: all 0.3s ease;
         }
 
-        .modal-overlay.active .modal-box {
-            transform: scale(1);
-        }
+        .modal-overlay.active .modal-box { transform: scale(1); }
 
         .modal-close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 24px;
-            color: #ffffff;
-            cursor: pointer;
-            transition: color 0.2s;
+            position: absolute; top: 20px; right: 25px;
+            font-size: 30px; color: #fff; cursor: pointer;
         }
 
-        .modal-close:hover {
-            color: #00f3ff;
-        }
-
-        .modal-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #00f3ff;
-            margin-bottom: 5px;
-        }
-
-        .modal-price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #bc13fe;
-            margin-bottom: 20px;
-        }
-
-        .modal-subtitle {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #aaaaaa;
-            margin-bottom: 8px;
-            margin-top: 15px;
-        }
-
-        .modal-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .modal-list li {
-            font-size: 13px;
-            color: #dddddd;
-            padding: 6px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .modal-list li i {
-            color: #00f3ff;
-            font-size: 12px;
-        }
-
+        .modal-title { font-size: 24px; font-weight: 900; color: #00f3ff; margin-bottom: 5px; }
+        .modal-price { font-size: 20px; font-weight: 800; color: #bc13fe; margin-bottom: 25px; }
+        .modal-subtitle { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: #888; margin: 20px 0 10px 0; font-weight: bold;}
+        .modal-list { list-style: none; }
+        .modal-list li { font-size: 14px; color: #ddd; padding: 8px 0; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .modal-list li i { color: #00f3ff; font-size: 14px; margin-top: 3px; }
+        
         .modal-btn-buy {
-            display: block;
-            width: 100%;
-            background: #00f3ff;
-            color: #000000;
-            text-align: center;
-            padding: 14px;
-            border-radius: 12px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 25px;
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
-            transition: all 0.3s ease;
+            display: block; width: 100%; background: #00f3ff; color: #000; text-align: center;
+            padding: 16px; border-radius: 12px; font-weight: 900; text-decoration: none;
+            margin-top: 30px; transition: all 0.3s;
         }
+        .modal-btn-buy:hover { background: #fff; box-shadow: 0 0 25px rgba(255,255,255,0.5); }
 
-        .modal-btn-buy:hover {
-            background: #ffffff;
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+        /* RESPONSIVE UNTUK HP */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .hero-container { flex-direction: column; text-align: center; }
+            .hero-title { font-size: 3.5rem; }
+            .hero-buttons { justify-content: center; }
+            .hero-mascot { font-size: 150px; margin-top: 20px; }
+            .grid-pricing { grid-template-columns: 1fr; }
+            #home { padding-top: 120px; }
+            section { padding: 80px 5% 50px 5%; }
         }
     </style>
 </head>
@@ -361,127 +490,82 @@
 
     <div id="particles-js"></div>
 
-    <div class="marquee-container">
-        <div class="marquee-text" id="teks-berjalan"></div>
-    </div>
+    <nav>
+        <a href="#" class="nav-brand">
+            <img src="14853.jpg" alt="Logo">
+            DND DEV
+        </a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#produk">Katalog Script</a>
+            <a href="#pricing">Program Partner</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
 
-    <div class="glass-container" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
-        
-        <div class="robot-mascot">
-            <i class="fas fa-robot"></i>
-        </div>
-
-        <img src="14853.jpg" alt="Logo DND" class="logo">
-        
-        <h1>DND DEVELOPMENT</h1>
-        <p class="subtitle">Elevating Your Digital Experience</p>
-
-        <div class="section-title">
-            <i class="fas fa-headset"></i> Hubungi Admin
-        </div>
-        <a id="link-wa-admin" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fab fa-whatsapp icon"></i> WhatsApp Admin</div>
-        </a>
-        <a id="link-tele-admin" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fab fa-telegram icon"></i> Telegram Admin</div>
-        </a>
-
-        <div class="section-title">
-            <i class="fas fa-users"></i> Join Komunitas
-        </div>
-        <a id="link-wa-channel" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fab fa-whatsapp icon"></i> Channel WhatsApp</div>
-        </a>
-        <a id="link-tele-channel" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fab fa-telegram icon"></i> Channel Telegram</div>
-        </a>
-
-        <div class="section-title">
-            <i class="fas fa-code"></i> Katalog Script Bot & Web
-        </div>
-        <a id="link-script-1" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-file-code icon"></i> <span id="nama-script-1"></span></div>
-            <span class="price-badge" id="harga-script-1"></span>
-        </a>
-        <a id="link-script-2" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-file-code icon"></i> <span id="nama-script-2"></span></div>
-            <span class="price-badge" id="harga-script-2"></span>
-        </a>
-        <a id="link-script-3" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-file-code icon"></i> <span id="nama-script-3"></span></div>
-            <span class="price-badge" id="harga-script-3"></span>
-        </a>
-        <a id="link-script-4" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-file-code icon"></i> <span id="nama-script-4"></span></div>
-            <span class="price-badge" id="harga-script-4"></span>
-        </a>
-        <a id="link-script-5" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-file-code icon"></i> <span id="nama-script-5"></span></div>
-            <span class="price-badge" id="harga-script-5"></span>
-        </a>
-        <a id="link-script-6" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-file-code icon"></i> <span id="nama-script-6"></span></div>
-            <span class="price-badge" id="harga-script-6"></span>
-        </a>
-        <a id="link-script-7" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-file-code icon"></i> <span id="nama-script-7"></span></div>
-            <span class="price-badge" id="harga-script-7"></span>
-        </a>
-
-        <div class="section-title">
-            <i class="fas fa-crown"></i> Program Partner Script
-        </div>
-        <div class="link-btn" onclick="openModal('basic')">
-            <div class="link-content"><i class="fas fa-user-shield icon"></i> Partner Script Basic</div>
-            <span class="price-badge">Rp 300rb</span>
-        </div>
-        <div class="link-btn" onclick="openModal('vip')">
-            <div class="link-content"><i class="fas fa-gem icon" style="color: #bc13fe;"></i> Partner Script VIP</div>
-            <span class="price-badge" style="background: rgba(188,19,254,0.2); border-color: #bc13fe; color: #bc13fe;">Rp 500rb/thn</span>
-        </div>
-
-        <div class="section-title">
-            <i class="fas fa-robot"></i> Karya & Project Bot
-        </div>
-        <a id="link-bot-1" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fab fa-telegram icon"></i> <span id="nama-bot-1"></span></div>
-        </a>
-        <a id="link-bot-2" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fab fa-telegram icon"></i> <span id="nama-bot-2"></span></div>
-        </a>
-        
-        <div class="section-title">
-            <i class="fas fa-globe"></i> Project Web API
-        </div>
-        <a id="link-api-1" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-globe icon"></i> <span id="nama-api-1"></span></div>
-        </a>
-        <a id="link-api-2" href="#" class="link-btn" target="_blank">
-            <div class="link-content"><i class="fas fa-server icon"></i> <span id="nama-api-2"></span></div>
-        </a>
-
-        <div class="section-title">
-            <i class="fas fa-star"></i> Layanan Premium
-        </div>
-        <div class="services-list">
-            <div class="service-list-item">
-                <i class="fas fa-check"></i> <span id="jasa-1"></span>
+    <section id="home">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 class="hero-title">Build. Automate. <span class="text-gradient">Scale.</span></h1>
+                <p class="hero-subtitle">Kami menyediakan Source Code Bot, Web API, dan Panel Pterodactyl premium untuk mempercepat pertumbuhan bisnis digital Anda.</p>
+                <div class="hero-buttons">
+                    <a href="#produk" class="btn-primary">Jelajahi Produk</a>
+                    <a href="#pricing" class="btn-secondary">Join Partner</a>
+                </div>
             </div>
-            <div class="service-list-item">
-                <i class="fas fa-check"></i> <span id="jasa-2"></span>
-            </div>
-            <div class="service-list-item">
-                <i class="fas fa-check"></i> <span id="jasa-3"></span>
-            </div>
-            <div class="service-list-item">
-                <i class="fas fa-check"></i> <span id="jasa-4"></span>
+            <div class="hero-visual">
+                <i class="fas fa-robot hero-mascot"></i>
             </div>
         </div>
+    </section>
 
-        <div class="footer">
-            &copy; 2026 DND STORE. Seluruh Hak Cipta Dilindungi
+    <section id="produk">
+        <div class="section-header">
+            <h2>Katalog <span class="text-gradient">Script & Bot</span></h2>
+            <p>Pilih source code unggulan kami yang siap pakai dan mudah dikustomisasi.</p>
         </div>
-    </div>
+        <div class="grid-products" id="productGrid">
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="section-header">
+            <h2>Program <span class="text-gradient">Partner</span></h2>
+            <p>Gandakan keuntungan Anda dengan akses lisensi eksklusif dari DND Development.</p>
+        </div>
+        <div class="grid-pricing">
+            
+            <div class="pricing-card" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <i class="fas fa-user-shield pricing-icon" style="color: #00f3ff;"></i>
+                <h3 class="pricing-title">Basic</h3>
+                <div class="pricing-desc">Mulai bangun aset digitalmu.</div>
+                <div class="pricing-price" style="color: #00f3ff;">Rp 300k</div>
+                <button onclick="openModal('basic')" class="pricing-btn btn-basic">Lihat Keuntungan</button>
+            </div>
+
+            <div class="pricing-card vip" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.2">
+                <i class="fas fa-crown pricing-icon" style="color: #bc13fe;"></i>
+                <h3 class="pricing-title">VIP Access</h3>
+                <div class="pricing-desc">All access untuk bisnis skala penuh.</div>
+                <div class="pricing-price" style="color: #bc13fe;">Rp 500k<span style="font-size: 16px; color:#888;">/thn</span></div>
+                <button onclick="openModal('vip')" class="pricing-btn btn-vip">Lihat Keuntungan</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <h2>Hubungi <span class="text-gradient">Kami</span></h2>
+            <p>Butuh bantuan instalasi atau pembuatan project custom? Admin kami selalu sedia.</p>
+        </div>
+        <div class="contact-grid" id="contactGrid">
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 DND STORE. Seluruh Hak Cipta Dilindungi. Build with passion by DND Development.
+    </footer>
 
     <div class="modal-overlay" id="partnerModal">
         <div class="modal-box">
@@ -489,7 +573,7 @@
             <div class="modal-title" id="mTitle"></div>
             <div class="modal-price" id="mPrice"></div>
             
-            <div class="modal-subtitle">Keuntungan:</div>
+            <div class="modal-subtitle">Keuntungan Anda:</div>
             <ul class="modal-list" id="mBenefits"></ul>
 
             <div class="modal-subtitle">Yang Didapatkan:</div>
@@ -505,60 +589,51 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
-        const WA_ADMIN = "https://wa.me/6285122534702";
-        const TELE_ADMIN = "https://t.me/dndstoreontele";
-        const WA_CHANNEL = "https://whatsapp.com/channel/0029Vb6C5jL4SpkIgR7iD841";
-        const TELE_CHANNEL = "https://t.me/dndstoreontele";
-        
-        const SCRIPT_1_NAME = "Aeri Bot v1.7 (Store)";
-        const SCRIPT_1_PRICE = "Rp 50.000";
-        const SCRIPT_1_LINK = "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v1.7%20Store";
+        const products = [
+            { name: "Aeri Bot v1.7 (Store)", price: "Rp 50.000", icon: "fa-robot", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v1.7%20Store" },
+            { name: "Aeri Bot v1.7 Store + AM", price: "Rp 75.000", icon: "fa-layer-group", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v1.7%20Store%20+%20Fitur%20AM" },
+            { name: "Aeri Bot v2.7 (Bot MD)", price: "Rp 75.000", icon: "fa-rocket", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v2.7%20MD" },
+            { name: "Aeri Bot v2.7 MD + AM", price: "Rp 100.000", icon: "fa-bolt", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v2.7%20MD%20+%20Fitur%20AM" },
+            { name: "Script Gummy AM Telegram", price: "Rp 60.000", icon: "fa-paper-plane", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20Gummy%20AM%20Telegram" },
+            { name: "Script OTP Netflix & Disney", price: "Rp 40.000", icon: "fa-key", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20OTP%20Netflix%20Disney" },
+            { name: "Script Tmail", price: "Rp 35.000", icon: "fa-envelope-open-text", link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20Tmail" },
+            { name: "Web API Alight Motion", price: "Live Project", icon: "fa-globe", link: "https://am.dndonly.my.id" },
+            { name: "Rest API Website", price: "Live Project", icon: "fa-server", link: "https://api.dndonly.my.id" }
+        ];
 
-        const SCRIPT_2_NAME = "Aeri Bot v1.7 Store + Fitur AM";
-        const SCRIPT_2_PRICE = "Rp 75.000";
-        const SCRIPT_2_LINK = "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v1.7%20Store%20+%20Fitur%20AM";
+        const productGrid = document.getElementById('productGrid');
+        products.forEach(p => {
+            productGrid.innerHTML += `
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas ${p.icon}"></i></div>
+                    <div class="product-title">${p.name}</div>
+                    <div class="product-price">${p.price}</div>
+                    <a href="${p.link}" target="_blank" class="product-btn"><i class="fas fa-shopping-cart"></i> Order Now</a>
+                </div>
+            `;
+        });
 
-        const SCRIPT_3_NAME = "Aeri Bot v2.7 (Bot MD)";
-        const SCRIPT_3_PRICE = "Rp 75.000";
-        const SCRIPT_3_LINK = "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v2.7%20MD";
+        const contacts = [
+            { name: "WhatsApp Admin", icon: "fab fa-whatsapp", link: "https://wa.me/6285122534702", color: "#25D366" },
+            { name: "Telegram Admin", icon: "fab fa-telegram", link: "https://t.me/dndstoreontele", color: "#0088cc" },
+            { name: "Channel WhatsApp", icon: "fas fa-bullhorn", link: "https://whatsapp.com/channel/0029Vb6C5jL4SpkIgR7iD841", color: "#25D366" },
+            { name: "Channel Telegram", icon: "fas fa-broadcast-tower", link: "https://t.me/dndstoreontele", color: "#0088cc" }
+        ];
 
-        const SCRIPT_4_NAME = "Aeri Bot v2.7 MD + Fitur AM";
-        const SCRIPT_4_PRICE = "Rp 100.000";
-        const SCRIPT_4_LINK = "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Aeri%20Bot%20v2.7%20MD%20+%20Fitur%20AM";
-
-        const SCRIPT_5_NAME = "Script Gummy AM Telegram (v1 & v2)";
-        const SCRIPT_5_PRICE = "Rp 60.000";
-        const SCRIPT_5_LINK = "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20Gummy%20AM%20Telegram";
-
-        const SCRIPT_6_NAME = "Script OTP Netflix & Disney";
-        const SCRIPT_6_PRICE = "Rp 40.000";
-        const SCRIPT_6_LINK = "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20OTP%20Netflix%20Disney";
-
-        const SCRIPT_7_NAME = "Script Tmail";
-        const SCRIPT_7_PRICE = "Rp 35.000";
-        const SCRIPT_7_LINK = "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20beli%20Script%20Tmail";
-
-        const BOT_1_NAME = "Beli Panel Pterodactyl Hitungan Detik";
-        const BOT_1_LINK = "https://t.me/dndpanelbot";
-        const BOT_2_NAME = "Premiumin Akun Alight Motion";
-        const BOT_2_LINK = "https://t.me/dndambot";
-        
-        const API_1_NAME = "Web API Alight Motion";
-        const API_1_LINK = "https://am.dndonly.my.id";
-        const API_2_NAME = "Rest API Website";
-        const API_2_LINK = "https://api.dndonly.my.id";
-        
-        const TEKS_JALAN = "✦ Solusi Kebutuhan Digital Anda ✦ DND DEVELOPMENT ✦ Pelayanan Cepat & Terpercaya ✦";
-        
-        const LAYANAN_1 = "Source Code Bot / Web";
-        const LAYANAN_2 = "Jasa Pembuatan Web / Bot Custom";
-        const LAYANAN_3 = "Sewa Bot WhatsApp";
-        const LAYANAN_4 = "Sewa Panel Pterodactyl & VPS";
+        const contactGrid = document.getElementById('contactGrid');
+        contacts.forEach(c => {
+            contactGrid.innerHTML += `
+                <a href="${c.link}" target="_blank" class="contact-card">
+                    <i class="${c.icon}" style="font-size: 30px; color: ${c.color};"></i>
+                    <div style="font-weight: 600; font-size: 16px;">${c.name}</div>
+                </a>
+            `;
+        });
 
         const partnerData = {
             basic: {
                 title: "Partner Script Basic",
-                price: "Rp 300.000 (Sekali Bayar)",
+                price: "Rp 300.000",
                 benefits: [
                     "Bisa menjual kembali script paket Basic ke orang lain",
                     "Keuntungan penjualan 100% milik sendiri",
@@ -574,7 +649,7 @@
             },
             vip: {
                 title: "Partner Script VIP",
-                price: "Rp 500.000 (Membership 1 Tahun)",
+                price: "Rp 500.000",
                 benefits: [
                     "Akses ALL ACCESS ke SEMUA script DND Development",
                     "Hak penuh untuk jualan semua script tanpa batas",
@@ -585,62 +660,12 @@
                     "Semua Versi Aeri Bot (v1.7 & v2.7 MD + Fitur AM)",
                     "Script Gummy AM Telegram v1 & v2",
                     "Script OTP Netflix & Disney serta Script Tmail",
-                    "Akses update script selamanya selama masa aktif 1 tahun",
+                    "Akses update script selamanya selama masa aktif",
                     "Masuk grup VIP Eksklusif & Private Channel"
                 ],
                 link: "https://wa.me/6285122534702?text=Halo%20Admin,%20saya%20mau%20gabung%20Partner%20Script%20VIP%20Rp500k"
             }
         };
-
-        document.getElementById("link-wa-admin").href = WA_ADMIN;
-        document.getElementById("link-tele-admin").href = TELE_ADMIN;
-        document.getElementById("link-wa-channel").href = WA_CHANNEL;
-        document.getElementById("link-tele-channel").href = TELE_CHANNEL;
-
-        document.getElementById("nama-script-1").innerText = SCRIPT_1_NAME;
-        document.getElementById("harga-script-1").innerText = SCRIPT_1_PRICE;
-        document.getElementById("link-script-1").href = SCRIPT_1_LINK;
-
-        document.getElementById("nama-script-2").innerText = SCRIPT_2_NAME;
-        document.getElementById("harga-script-2").innerText = SCRIPT_2_PRICE;
-        document.getElementById("link-script-2").href = SCRIPT_2_LINK;
-
-        document.getElementById("nama-script-3").innerText = SCRIPT_3_NAME;
-        document.getElementById("harga-script-3").innerText = SCRIPT_3_PRICE;
-        document.getElementById("link-script-3").href = SCRIPT_3_LINK;
-
-        document.getElementById("nama-script-4").innerText = SCRIPT_4_NAME;
-        document.getElementById("harga-script-4").innerText = SCRIPT_4_PRICE;
-        document.getElementById("link-script-4").href = SCRIPT_4_LINK;
-
-        document.getElementById("nama-script-5").innerText = SCRIPT_5_NAME;
-        document.getElementById("harga-script-5").innerText = SCRIPT_5_PRICE;
-        document.getElementById("link-script-5").href = SCRIPT_5_LINK;
-
-        document.getElementById("nama-script-6").innerText = SCRIPT_6_NAME;
-        document.getElementById("harga-script-6").innerText = SCRIPT_6_PRICE;
-        document.getElementById("link-script-6").href = SCRIPT_6_LINK;
-
-        document.getElementById("nama-script-7").innerText = SCRIPT_7_NAME;
-        document.getElementById("harga-script-7").innerText = SCRIPT_7_PRICE;
-        document.getElementById("link-script-7").href = SCRIPT_7_LINK;
-
-        document.getElementById("nama-bot-1").innerText = BOT_1_NAME;
-        document.getElementById("link-bot-1").href = BOT_1_LINK;
-        document.getElementById("nama-bot-2").innerText = BOT_2_NAME;
-        document.getElementById("link-bot-2").href = BOT_2_LINK;
-        
-        document.getElementById("nama-api-1").innerText = API_1_NAME;
-        document.getElementById("link-api-1").href = API_1_LINK;
-        document.getElementById("nama-api-2").innerText = API_2_NAME;
-        document.getElementById("link-api-2").href = API_2_LINK;
-        
-        document.getElementById("teks-berjalan").innerText = TEKS_JALAN + " " + TEKS_JALAN;
-        
-        document.getElementById("jasa-1").innerText = LAYANAN_1;
-        document.getElementById("jasa-2").innerText = LAYANAN_2;
-        document.getElementById("jasa-3").innerText = LAYANAN_3;
-        document.getElementById("jasa-4").innerText = LAYANAN_4;
 
         function openModal(type) {
             const data = partnerData[type];
@@ -649,13 +674,13 @@
             
             let benefitsHTML = "";
             data.benefits.forEach(item => {
-                benefitsHTML += `<li><i class="fas fa-check-circle"></i> ${item}</li>`;
+                benefitsHTML += `<li><i class="fas fa-check-circle"></i> <span>${item}</span></li>`;
             });
             document.getElementById("mBenefits").innerHTML = benefitsHTML;
 
             let getsHTML = "";
             data.gets.forEach(item => {
-                getsHTML += `<li><i class="fas fa-box-open"></i> ${item}</li>`;
+                getsHTML += `<li><i class="fas fa-box-open"></i> <span>${item}</span></li>`;
             });
             document.getElementById("mGets").innerHTML = getsHTML;
 
@@ -669,39 +694,18 @@
 
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "number": { "value": 70, "density": { "enable": true, "value_area": 1000 } },
                 "color": { "value": "#00f3ff" },
                 "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": false },
+                "opacity": { "value": 0.3, "random": true },
                 "size": { "value": 3, "random": true },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#00f3ff",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false
-                }
+                "line_linked": { "enable": true, "distance": 150, "color": "#00f3ff", "opacity": 0.1, "width": 1 },
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "out_mode": "out" }
             },
             "interactivity": {
                 "detect_on": "canvas",
-                "events": {
-                    "onhover": { "enable": true, "mode": "grab" },
-                    "onclick": { "enable": true, "mode": "push" },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
-                    "push": { "particles_nb": 4 }
-                }
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 200, "line_linked": { "opacity": 0.3 } }, "push": { "particles_nb": 4 } }
             },
             "retina_detect": true
         });
